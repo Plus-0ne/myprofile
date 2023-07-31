@@ -1,0 +1,148 @@
+/* Open sans google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+:root {
+    --bg-light-color : rgba(255,255,255,1);
+    --bg-purple-color : rgba(142, 36, 170,1);
+
+    --font-family-primary : 'Open Sans', sans-serif;
+
+    --text-size-default : 0.90rem;
+    --text-size-small : 0.80rem;
+    
+    --fc-light : rgba(255,255,255,1);
+    --fc-dark : rgb(41, 41, 41);
+    --fc-dark-gray : rgb(112, 112, 112);
+}
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    clear: both;
+    content: "";
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+div.wrapper {
+    min-height: 100vh;
+    height: 100%;
+    background-color: var(--bg-light-color);
+}
+div.main-content {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    -ms-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    -moz-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    -o-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 12px;
+}
+.my-details {
+    background-color: var(--bg-purple-color);
+    height: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+.profile-hero {
+    position: relative;
+    width: 100%; /* Or any desired width */
+    min-height: 280px;
+}
+.profile-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    padding: 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.profile-picture {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.web-text {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    color: var(--fc-light);
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.dev-text {
+    position: absolute;
+    left: 30px;
+    top: 140px;
+    color: var(--fc-light);
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.p-links {
+    text-decoration: none;
+    color: var(--fc-light);
+}
+/* -------------------------------------------------------------------------- */
+/*                              Custom text size                              */
+/* -------------------------------------------------------------------------- */
+.ts-default {
+    font-size: var(--text-size-default);
+}
+.ts-small {
+    font-size: var(--text-size-small);
+}
+/* -------------------------------------------------------------------------- */
+/*                              Custom text font                              */
+/* -------------------------------------------------------------------------- */
+.tf-default {
+    font-family: var(--font-family-primary);
+}
+/* -------------------------------------------------------------------------- */
+/*                              Custom text color                             */
+/* -------------------------------------------------------------------------- */
+.tc-light {
+    color: var(--fc-light);
+}
+.tc-dark {
+    color: var(--fc-dark);
+}
+.tc-dark-grey {
+    color: var(--fc-dark-gray);
+}
+/* -------------------------------------------------------------------------- */
+/*                            Custom letter spacing                           */
+/* -------------------------------------------------------------------------- */
+.ls-small {
+    letter-spacing: 0.3pt;
+}
+/* -------------------------------------------------------------------------- */
+/*                           Custom bootstrap tweaks                          */
+/* -------------------------------------------------------------------------- */
+.lead {
+    font-family: var(--font-family-primary);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Media queries                               */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 576px) {  }
+
+@media (min-width: 768px) {  }
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {  }
+
+@media (min-width: 1400px) {
+    .profile-hero {
+        min-height: 245px;
+    }
+    .profile-container {
+        right: 70px;
+    }
+    .my-details {
+        border-radius: 0px 12px 12px 0px;
+    }
+}
