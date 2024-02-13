@@ -46,14 +46,14 @@ div.main-content {
     min-height: 280px;
 }
 .profile-container {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     padding: 3px;
     background-color: rgb(255, 255, 255);
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 40px;
+    right: 25px;
 }
 .profile-picture {
     max-width: 100%;
@@ -65,18 +65,18 @@ div.main-content {
 .web-text {
     position: absolute;
     left: 30px;
-    top: 60px;
+    top: 50px;
     color: var(--fc-light);
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 300;
     line-height: 1.2;
 }
 .dev-text {
     position: absolute;
     left: 30px;
-    top: 140px;
+    top: 130px;
     color: var(--fc-light);
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 300;
     line-height: 1.2;
 }
@@ -140,8 +140,9 @@ div.main-content {
         min-height: 245px;
     }
     .profile-container {
-        right: 70px;
+        right: 40px;
     }
+    
     .my-details {
         border-radius: 0px 12px 12px 0px;
     }
