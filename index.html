@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" value="notranslate">
     <title>
         Romel P. Cubelo
     </title>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="bootstrap//css/bootstrap.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.v2.css">
+    <link rel="stylesheet" href="css/style.v3.css">
     <!-- Material design icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
@@ -18,92 +19,161 @@
 <body>
     <div class="wrapper">
 
-        <div class="page">
+        <div class="m-phone">
 
-            <div class="content">
-                <h1>
-                    Hi! I'm Romel P. Cubelo
-                </h1>
+            <div class="m-phone-cam">
+                <div class="cam-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>circle</title>
+                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="m-phone-screen">
+                <div class="m-phone-notif">
+                    <div class="d-flex flex-row justify-content-start">
+                        <div class="m-phone-notif-icon">
+                            <div id="localTimeCounter" class="m-phone-notif-time">
+                                00:00
+                            </div>
+                        </div>
+                        <div class="m-phone-notif-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>alarm</title>
+                                <path
+                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22A9,9 0 0,0 21,13A9,9 0 0,0 12,4M12.5,8H11V14L15.75,16.85L16.5,15.62L12.5,13.25V8M7.88,3.39L6.6,1.86L2,5.71L3.29,7.24L7.88,3.39M22,5.72L17.4,1.86L16.11,3.39L20.71,7.25L22,5.72Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-end">
+                        <div class="m-phone-notif-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>bell-off-outline</title>
+                                <path
+                                    d="M22.11,21.46L2.39,1.73L1.11,3L5.83,7.72C5.29,8.73 5,9.86 5,11V17L3,19V20H18.11L20.84,22.73L22.11,21.46M7,18V11C7,10.39 7.11,9.79 7.34,9.23L16.11,18H7M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M8.29,5.09C8.82,4.75 9.4,4.5 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V15.8L17,13.8V11A5,5 0 0,0 12,6C11.22,6 10.45,6.2 9.76,6.56L8.29,5.09Z" />
+                            </svg>
+                        </div>
+                        <div class="m-phone-notif-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>signal</title>
+                                <path d="M3,21H6V18H3M8,21H11V14H8M13,21H16V9H13M18,21H21V3H18V21Z" />
+                            </svg>
+                        </div>
+                        <div class="m-phone-notif-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>wifi</title>
+                                <path
+                                    d="M12,21L15.6,16.2C14.6,15.45 13.35,15 12,15C10.65,15 9.4,15.45 8.4,16.2L12,21M12,3C7.95,3 4.21,4.34 1.2,6.6L3,9C5.5,7.12 8.62,6 12,6C15.38,6 18.5,7.12 21,9L22.8,6.6C19.79,4.34 16.05,3 12,3M12,9C9.3,9 6.81,9.89 4.8,11.4L6.6,13.8C8.1,12.67 9.97,12 12,12C14.03,12 15.9,12.67 17.4,13.8L19.2,11.4C17.19,9.89 14.7,9 12,9Z" />
+                            </svg>
+                        </div>
+                        <div class="m-phone-notif-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <title>battery-50</title>
+                                <path
+                                    d="M16,13H8V6H16M16.67,4H15V2H9V4H7.33A1.33,1.33 0 0,0 6,5.33V20.67C6,21.4 6.6,22 7.33,22H16.67A1.33,1.33 0 0,0 18,20.67V5.33C18,4.6 17.4,4 16.67,4Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-phone-main">
+                    <div class="fb-messenger-clone">
+                        <div class="fb-messenger-clone-tab">
+                            <div class="fb-messenger-clone-tab-back">
+                                <div class="messenger-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title>arrow-left</title>
+                                        <path
+                                            d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="fb-messenger-clone-tab-name">
+                                <div class="image-profile">
+                                    <img src="img/pic1.png" alt="" />
+                                </div>
+                                <span class="myName">
+
+                                </span>
+                            </div>
+                            <div class="fb-messenger-clone-tab-options">
+                                <div class="messenger-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title>phone</title>
+                                        <path
+                                            d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                                    </svg>
+                                </div>
+                                <div class="messenger-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title>video</title>
+                                        <path
+                                            d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z" />
+                                    </svg>
+                                </div>
+                                <div class="messenger-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <title>information</title>
+                                        <path
+                                            d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chatContainer" class="fb-messenger-clone-chat">
+                            <div class="chat-header-info d-flex flex-column align-items-center mb-3">
+                                <div class="chat-messenger-image mb-2">
+                                    <img src="img/pic1.png" alt="">
+                                </div>
+                                <div class="d-flex flex-row align-items-center">
+                                    <strong class="myName roboto-regular"></strong>
+                                    <div class="official-badge">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <title>check-decagram</title>
+                                            <path
+                                                d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div id="location"></div>
+                                <div id="contactInformation" class="d-flex flex-wrap justify-content-center"></div>
+                            </div>
+                            <div id="messageScroller" class="chat-messages-scroller">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="fb-messenger-clone-controls">
+
+                    </div>
+                </div>
+
+                <div class="m-phone-button">
+                    <div class="button-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>square-rounded</title>
+                            <path
+                                d="M8 3H16C18.76 3 21 5.24 21 8V16C21 18.76 18.76 21 16 21H8C5.24 21 3 18.76 3 16V8C3 5.24 5.24 3 8 3Z" />
+                        </svg>
+                    </div>
+                    <div class="button-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>circle-slice-8</title>
+                            <path
+                                d="M12 5C15.87 5 19 8.13 19 12C19 15.87 15.87 19 12 19C8.13 19 5 15.87 5 12C5 8.13 8.13 5 12 5M12 2C17.5 2 22 6.5 22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2M12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4Z" />
+                        </svg>
+                    </div>
+                    <div class="button-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>triangle-down</title>
+                            <path d="M1 3H23L12 22" />
+                        </svg>
+                    </div>
+                </div>
             </div>
 
-            <button class="scrl-dwn">
-                <div class="btn-svg-icon-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>chevron-double-down</title>
-                        <path
-                            d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
-                    </svg>
-                </div>
-            </button>
-
         </div>
-
-        <div class="page">
-            <button class="scrl-up">
-                <div class="btn-svg-icon-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>chevron-double-up</title>
-                        <path
-                            d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" />
-                    </svg>
-                </div>
-            </button>
-            <div class="content">
-                <h1>
-                    Romel P. Cubelo
-                </h1>
-            </div>
-            <button class="scrl-dwn">
-                <div class="btn-svg-icon-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>chevron-double-down</title>
-                        <path
-                            d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
-                    </svg>
-                </div>
-            </button>
-        </div>
-
-        <div class="page">
-            <button class="scrl-up">
-                <div class="btn-svg-icon-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>chevron-double-up</title>
-                        <path
-                            d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" />
-                    </svg>
-                </div>
-            </button>
-            <h1>
-                Page 3
-            </h1>
-            <button class="scrl-dwn">
-                <div class="btn-svg-icon-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>chevron-double-down</title>
-                        <path
-                            d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
-                    </svg>
-                </div>
-            </button>
-        </div>
-
-        <div class="page">
-            <button class="scrl-up">
-                <div class="btn-svg-icon-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>chevron-double-up</title>
-                        <path
-                            d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" />
-                    </svg>
-                </div>
-            </button>
-            <h1>
-                Page 4
-            </h1>
-
-        </div>
-
+    </div>
     </div>
 
 
@@ -117,27 +187,75 @@
 
     <script>
         $(function () {
+            const setCurrentTime = () => {
+                let currentTime = new Date();
+                let hours = currentTime.getHours() % 12;
+                hours = String(hours).padStart(2, '0');
+                if (hours == "00") {
+                    hours = 12; // Changes 00:xx to 12:xx
+                }
 
-            // Scroll down
-            $(".scrl-dwn").on("click", function () {
-                const wrapper = $('.wrapper');
+                let mins = String(currentTime.getMinutes()).padStart(2, '0');
 
-                wrapper.animate({
-                    scrollTop: wrapper.scrollTop() + $(window).height()
-                }, 600);
-            });
+                let ampm = currentTime.getHours() >= 12 ? 'PM' : 'AM';
 
-            // Scroll up
-            $(".scrl-up").on("click", function () {
-                const wrapper = $('.wrapper');
+                $("#localTimeCounter").html(`${hours}:${mins} ${ampm}`);
+            }
 
-                wrapper.animate({
-                    scrollTop: wrapper.scrollTop() - $(window).height()
-                }, 600);
-            });
+            setInterval(() => {
+                setCurrentTime();
+            }, 1);
+
+            const getJsonData = () => {
+                fetch("json/data.json")
+                    .then(response => response.json())
+                    .then((data) => {
+                        fillChatContainerWithData(data);
+                    })
+                    .catch(err => console.error("Error loading JSON:", err));
+            }
+            getJsonData();
+
+            const fillChatContainerWithData = (data) => {
+
+                let myName = $(".myName");
+                let contactInformation = $("#contactInformation");
+                let location = $("#location");
+
+                console.log(data);
+
+                myName.html(data.name);
+
+                location.html(`<small>${data.location}</small>`);
+
+                contactInformation.html("");
+                $.each(data.contact, function (ind, val) {
+                    contactInformation.append(`
+                     <div class="me-1"><small class="ex-small">${ind.substr(0, 1).toUpperCase() + ind.substr(1)} : ${val}</small></div>
+                     `);
+                });
+
+                showTyping(`Hi! I’m ${data.name}, a full-stack developer 👋`);
+
+                setTimeout(() => {
+                    showTyping(data.summary, 1500);
+                }, 1500 + 500);
 
 
 
+            }
+
+            function showTyping(message, delay = 500) {
+                // Change this line to use #chatContainer:
+                $("#chatContainer").append('<div class="chat-bubble typing"><div class="typing-indicator"><span></span><span></span><span></span></div></div>');
+
+                // After delay, remove typing and show message
+                setTimeout(() => {
+                    $(".chat-bubble.typing").remove();
+                    // Change this line to use #chatContainer:
+                    $("#chatContainer").append(`<div class="msg left mb-3">${message}</div>`);
+                }, delay);
+            }
         });
     </script>
 </body>

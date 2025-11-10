@@ -1,0 +1,154 @@
+{
+    "name": "Romel P. Cubelo",
+    "location": "Angono City, Philippines",
+    "contact": {
+        "phone": "+639151579580",
+        "email": "romelcub@gmail.com",
+        "github": "https://github.com/Plus-0ne"
+    },
+    "summary": "Web developer with solid experience in HTML5, CSS, Bootstrap, JavaScript, jQuery and PHP, and practical knowledge of Laravel and CodeIgniter. Comfortable working on both front-end and back-end tasks and familiar with Vue.js, React, Tailwind CSS, C#, and VB.NET. Regularly use open-source tools like Composer and the NPM package manager. Eager to continue learning new technologies and contribute to well-built, user-friendly web applications.",
+    "core_skills": {
+        "languages": [
+            "HTML5",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "C#",
+            "VB.NET"
+        ],
+        "frameworks_libraries": [
+            "Laravel",
+            "CodeIgniter",
+            "Bootstrap",
+            "jQuery",
+            "Vue.js",
+            "React",
+            "Tailwind CSS"
+        ],
+        "tools_platforms": [
+            "Git",
+            "Composer",
+            "NPM",
+            "Laravel WebSockets",
+            "GitHub",
+            "GitLab",
+            "Bitbucket"
+        ],
+        "other": [
+            "REST API development",
+            "Responsive UI/UX",
+            "Leaflet.js",
+            "Basic SEO",
+            "Cross-browser compatibility",
+            "Google OAuth integration"
+        ]
+    },
+    "experience": [
+        {
+            "position": "Web Developer",
+            "company": "Manalo K9 Technologies International Corp.",
+            "years": "2021 – 2025",
+            "responsibilities": [
+                "Develop and maintain dynamic web applications using Laravel and CodeIgniter.",
+                "Implement responsive and accessible front-end interfaces with HTML5, CSS, and JavaScript.",
+                "Optimize backend logic and database performance for scalability and reliability.",
+                "Use Git for version control and participate in collaborative code reviews."
+            ]
+        },
+        {
+            "position": "Freelance Web Developer",
+            "company": "Wercher Solutions and Resources Labor Service Coop",
+            "location": "Antipolo City, Philippines",
+            "year": "2021",
+            "responsibilities": [
+                "Assisted in development of PHP-based websites and internal tools.",
+                "Provided maintenance, bug fixes, and feature enhancements for client projects.",
+                "Collaborated with designers and stakeholders to meet project requirements."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Social Media Platform",
+            "links": [
+                "https://lounge.metaanimals.org/",
+                "https://metaanimals.tech"
+            ],
+            "role": "Full-Stack Developer",
+            "tech_stack": [
+                "Laravel",
+                "PHP",
+                "JavaScript",
+                "jQuery",
+                "HTML5",
+                "CSS",
+                "Bootstrap",
+                "Git",
+                "Laravel WebSockets"
+            ],
+            "highlights": [
+                "Built a custom social media platform with Google Sign-In authentication, user profiles, and real-time chat using Laravel WebSockets.",
+                "Implemented secure login flows, scalable backend architecture, and responsive UI."
+            ]
+        },
+        {
+            "name": "Interactive Resort Map",
+            "link": "https://map.manalok9.com/",
+            "role": "Full-Stack Developer",
+            "tech_stack": [
+                "Leaflet.js",
+                "JavaScript",
+                "jQuery",
+                "HTML5",
+                "CSS",
+                "Bootstrap",
+                "PHP",
+                "Laravel"
+            ],
+            "highlights": [
+                "Built an interactive resort map with clickable markers and on-click image previews, optimized for mobile and desktop use."
+            ]
+        },
+        {
+            "name": "International Animal Genetics Database Website",
+            "link": "https://iagd.metaanimals.org/",
+            "role": "Backend Developer (Assisted)",
+            "tech_stack": [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "JavaScript",
+                "jQuery",
+                "Git",
+                "Bootstrap"
+            ],
+            "highlights": [
+                "Contributed to building a global database system for tracking and managing animal genetics data.",
+                "Implemented data modeling, secure APIs, and efficient search features to handle large datasets."
+            ]
+        },
+        {
+            "name": "Management Information System (MIS)",
+            "role": "Backend & Admin Web App Developer (Team Member)",
+            "tech_stack": [
+                "Laravel",
+                "PHP",
+                "JavaScript",
+                "jQuery",
+                "HTML5",
+                "CSS",
+                "Bootstrap",
+                "Git"
+            ],
+            "highlights": [
+                "Participated in developing a comprehensive MIS with integrated user authentication and an admin web application.",
+                "Designed secure login flows, user management modules, and admin dashboards for streamlined operations."
+            ]
+        }
+    ],
+    "education": {
+        "degree": "Bachelor’s Degree in Computer Science",
+        "school": "Skill Power Institute",
+        "address": "SPI Building, ML Quezon Avenue Extension, San Roque, Antipolo, Philippines"
+    }
+}

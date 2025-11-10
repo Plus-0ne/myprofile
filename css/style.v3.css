@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    content: "";
+    clear: both;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.wrapper {
+    min-height: 100vh;
+    background-color: rgb(0, 255, 242);
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-phone {
+    width: 380px;
+    height: 820px; /* <--- Fixed Height */
+    max-height: 820px;
+    min-height: 820px;
+    border: 5px solid gray;
+    border-radius: 21px;
+    display: flex;
+    flex-direction: column; /* CRITICAL: Makes children stack vertically */
+}
+
+.m-phone-cam {
+    width: 100%;
+    background-color: white;
+    border-radius: 16px 16px 0px 0px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cam-svg {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cam-svg svg {
+    width: 19px;
+    height: 100%;
+}
+
+.m-phone-screen {
+    height: calc(100% - 40px);
+    max-height: 100%;
+    border-left: 1rem solid white;
+    border-right: 1rem solid white;
+    border-bottom: 1rem solid white;
+    border-radius: 0px 0px 16px 16px;
+    box-sizing: border-box;
+    flex: 1; /* CRITICAL: Takes up the remaining vertical space */
+    display: flex;
+    flex-direction: column; /* CRITICAL: Makes its children stack vertically */
+}
+
+.m-phone-notif {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+    padding: 0.3rem .5rem;
+}
+
+.m-phone-notif-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.m-phone-notif-icon svg {
+    width: 13px;
+    height: 13px;
+    fill: white;
+}
+
+.m-phone-notif-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13px;
+    font-size: 11px;
+    color: white;
+}
+
+.button-svg {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-phone-button {
+    padding: 0.4rem;
+    background-color: rgb(44, 44, 44);
+    padding: 0.3rem .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button-svg svg {
+    width: 21px;
+    height: 100%;
+    fill: white;
+}
+
+.m-phone-main {
+    height: calc(100% - 53.18px);
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1; /* CRITICAL: Takes up all available space in m-phone-screen */
+    flex-direction: column; /* CRITICAL: Makes its children stack vertically */
+}
+
+.fb-messenger-clone {
+    height: 100%;
+    display: flex;
+    flex: 1; /* CRITICAL: Makes the chat area fill the space above controls */
+    background-color: white;
+    flex-direction: column;
+}
+
+.fb-messenger-clone-tab {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 0.5rem .5rem;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 3px 8px -2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 3px 8px -2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 8px -2px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.fb-messenger-clone-tab-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-profile {
+
+    width: 27px;
+    height: 27px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid gray;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.image-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fb-messenger-clone-tab-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-left: auto;
+    gap: 15px;
+}
+
+.messenger-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messenger-svg svg {
+    width: 21px;
+    height: 21px;
+}
+
+.fb-messenger-clone-chat {
+    display: flex;
+    flex-direction: column; 
+    flex: 1; /* CRITICAL: Fills space below the tab bar and handles overflow */
+    overflow-y: auto; /* <--- The SCROLLING MAGIC */
+    background-color: white;
+    padding: 16px;
+    max-height: calc(100% - 43px);
+}
+
+.msg {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.msg.left {
+    align-self: flex-start;
+    background-color: #e4e6eb;
+}
+
+.msg.right {
+    align-self: flex-end;
+    background-color: #0084ff;
+    color: white;
+}
+.chat-messenger-image {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid gray;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-messenger-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.official-badge {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    fill: rgb(0, 183, 255);
+}
+.ex-small {
+    font-size: 12px;
+}
+
+.chat-bubble.typing {
+  background-color: #f1f0f0;
+  color: #000;
+  border-radius: 18px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 24px;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background-color: #888;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: typingBounce 1.3s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.fb-messenger-clone-controls {}
+
+.fb-messenger-clone-chat > .d-flex.flex-column.align-items-center {
+    flex-shrink: 0; /* Ensures the header maintains its natural height */
+    padding-bottom: 10px; 
+    /* This ensures only the *messages* trigger the scroll bar, not the header. */
+}
