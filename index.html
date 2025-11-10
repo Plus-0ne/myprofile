@@ -10,19 +10,136 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="bootstrap//css/bootstrap.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.v2.css">
     <!-- Material design icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
 
 <body>
-    
+    <div class="wrapper">
+
+        <div class="page">
+
+            <div class="content">
+                <h1>
+                    Hi! I'm Romel P. Cubelo
+                </h1>
+            </div>
+
+            <button class="scrl-dwn">
+                <div class="btn-svg-icon-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>chevron-double-down</title>
+                        <path
+                            d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
+                    </svg>
+                </div>
+            </button>
+
+        </div>
+
+        <div class="page">
+            <button class="scrl-up">
+                <div class="btn-svg-icon-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>chevron-double-up</title>
+                        <path
+                            d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" />
+                    </svg>
+                </div>
+            </button>
+            <div class="content">
+                <h1>
+                    Romel P. Cubelo
+                </h1>
+            </div>
+            <button class="scrl-dwn">
+                <div class="btn-svg-icon-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>chevron-double-down</title>
+                        <path
+                            d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+
+        <div class="page">
+            <button class="scrl-up">
+                <div class="btn-svg-icon-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>chevron-double-up</title>
+                        <path
+                            d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" />
+                    </svg>
+                </div>
+            </button>
+            <h1>
+                Page 3
+            </h1>
+            <button class="scrl-dwn">
+                <div class="btn-svg-icon-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>chevron-double-down</title>
+                        <path
+                            d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+
+        <div class="page">
+            <button class="scrl-up">
+                <div class="btn-svg-icon-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <title>chevron-double-up</title>
+                        <path
+                            d="M7.41,18.41L6,17L12,11L18,17L16.59,18.41L12,13.83L7.41,18.41M7.41,12.41L6,11L12,5L18,11L16.59,12.41L12,7.83L7.41,12.41Z" />
+                    </svg>
+                </div>
+            </button>
+            <h1>
+                Page 4
+            </h1>
+
+        </div>
+
+    </div>
+
+
+
     <!-- Jquery 3.7.0 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Popper js -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- Bootstrap js -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+
+            // Scroll down
+            $(".scrl-dwn").on("click", function () {
+                const wrapper = $('.wrapper');
+
+                wrapper.animate({
+                    scrollTop: wrapper.scrollTop() + $(window).height()
+                }, 600);
+            });
+
+            // Scroll up
+            $(".scrl-up").on("click", function () {
+                const wrapper = $('.wrapper');
+
+                wrapper.animate({
+                    scrollTop: wrapper.scrollTop() - $(window).height()
+                }, 600);
+            });
+
+
+
+        });
+    </script>
 </body>
 
 </html>

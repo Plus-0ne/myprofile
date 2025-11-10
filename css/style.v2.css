@@ -1,0 +1,150 @@
+html {
+    height: 100%;
+    background-color: red;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    content: "";
+    clear: both;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.wrapper {
+
+    height: 100vh;
+    max-height: 100vh;
+    /* width: 100%; */
+    /* animation: wrapperShow 1.3s forwards; */
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page {
+    scroll-snap-align: start;
+    /* Each section starts a snap point */
+    height: 100vh;
+    /* Full screen height per section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: white;
+    position: relative;
+}
+
+.page:nth-child(1) {
+    background: #1abc9c;
+}
+
+.page:nth-child(2) {
+    background: #3498db;
+}
+
+.page:nth-child(3) {
+    background: #9b59b6;
+}
+
+.page:nth-child(4) {
+    background: #e74c3c;
+}
+
+.scrl-up {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 0px;
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    border: none;
+}
+
+.scrl-up:hover .btn-svg-icon-scroll {
+    /* transition: top ease-in-out 0.3s; */
+    animation: scrollUpHovered 1s infinite;
+}
+
+@keyframes scrollUpHovered {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -20px;
+    }
+}
+
+.scrl-dwn {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 24px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.scrl-dwn:hover .btn-svg-icon-scroll {
+    /* transition: top ease-in-out 0.3s; */
+    animation: scrollDwnHovered 1s infinite;
+}
+
+@keyframes scrollDwnHovered {
+    0% {
+        margin-bottom: 0px;
+    }
+
+    100% {
+        margin-bottom: -20px;
+    }
+}
+
+.btn-svg-icon-scroll {
+    width: 50px;
+    height: 50px;
+
+}
+
+.btn-svg-icon-scroll svg {
+    fill: aliceblue;
+}
+
+@keyframes wrapperShow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    background-color: #fff;
+    color: rgb(59, 59, 59);
+    border-radius: 25px;
+    padding: 2rem;
+
+}
+
+
+@keyframes delayAnimate {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
