@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html,
 body {
@@ -14,16 +14,14 @@ body {
 }
 
 * {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-.open-sans-regular {
-  font-family: "Open Sans", sans-serif;
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 .wrapper {
     min-height: 100vh;
@@ -72,9 +70,9 @@ body {
 .m-phone-screen {
     height: calc(100% - 40px);
     max-height: 100%;
-    border-left: 1rem solid white;
-    border-right: 1rem solid white;
-    border-bottom: 1rem solid white;
+    border-left: 0.2rem solid white;
+    border-right: 0.2rem solid white;
+    border-bottom: 0.2rem solid white;
     border-radius: 0px 0px 16px 16px;
     box-sizing: border-box;
     flex: 1; /* CRITICAL: Takes up the remaining vertical space */
@@ -129,6 +127,7 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 50px;
+    border-radius: 0px 0px 16px 16px;
 }
 
 .button-svg svg {
@@ -318,10 +317,42 @@ body {
     opacity: 1;
   }
 }
-.fb-messenger-clone-controls {}
+.fb-messenger-clone-controls {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem .5rem;
+}
+.form-input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 0.8rem 0.3rem;
+    border-radius: 20px;
+}
 
+.form-input-with-icon input {
+    position: absolute;
+    border-radius: 20px;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.messenger-svg-input {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 2px;
+    width: 21px;
+    height: 21px;
+}
 .fb-messenger-clone-chat > .d-flex.flex-column.align-items-center {
     flex-shrink: 0; /* Ensures the header maintains its natural height */
     padding-bottom: 10px; 
     /* This ensures only the *messages* trigger the scroll bar, not the header. */
+}
+.unordered-list {
+    list-style-type: none;
 }
