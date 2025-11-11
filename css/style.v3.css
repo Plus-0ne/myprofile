@@ -32,13 +32,19 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.m-phone {
+    padding: 5px;
+    background: #2e2e2e;
+background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1) 50%, rgba(97, 97, 97, 1) 100%);
+}
 .m-phone {
     width: 380px;
     height: 820px; /* <--- Fixed Height */
     max-height: 820px;
     min-height: 820px;
-    border: 5px solid gray;
+    /* border: 5px solid linear-gradient(to right, green, lightgreen); */
+    /* border-image: linear-gradient(to right, green, lightgreen); */
+    border-image-slice: 1;
     border-radius: 21px;
     display: flex;
     flex-direction: column; /* CRITICAL: Makes children stack vertically */
@@ -78,6 +84,9 @@ body {
     flex: 1; /* CRITICAL: Takes up the remaining vertical space */
     display: flex;
     flex-direction: column; /* CRITICAL: Makes its children stack vertically */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38) inset;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38) inset;
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38) inset;
 }
 
 .m-phone-notif {
@@ -212,6 +221,7 @@ body {
 .messenger-svg svg {
     width: 21px;
     height: 21px;
+    fill: #0084ff;
 }
 
 .fb-messenger-clone-chat {
@@ -355,4 +365,8 @@ body {
 }
 .unordered-list {
     list-style-type: none;
+}
+
+.unordered-list li {
+    margin-left: -15px;
 }
