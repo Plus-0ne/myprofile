@@ -18,11 +18,12 @@ body {
 }
 
 .montserrat-regular {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
 .wrapper {
     min-height: 100vh;
     background-color: rgb(0, 255, 242);
@@ -32,22 +33,26 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .m-phone {
     padding: 5px;
     background: #2e2e2e;
-background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1) 50%, rgba(97, 97, 97, 1) 100%);
+    background: linear-gradient(90deg, rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1) 50%, rgba(97, 97, 97, 1) 100%);
 }
+
 .m-phone {
     width: 380px;
-    height: 820px; /* <--- Fixed Height */
-    max-height: 820px;
-    min-height: 820px;
+    height: 620px;
+    /* <--- Fixed Height */
+    max-height: 620px;
+    min-height: 620px;
     /* border: 5px solid linear-gradient(to right, green, lightgreen); */
     /* border-image: linear-gradient(to right, green, lightgreen); */
     border-image-slice: 1;
     border-radius: 21px;
     display: flex;
-    flex-direction: column; /* CRITICAL: Makes children stack vertically */
+    flex-direction: column;
+    /* CRITICAL: Makes children stack vertically */
 }
 
 .m-phone-cam {
@@ -81,12 +86,14 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     border-bottom: 0.2rem solid white;
     border-radius: 0px 0px 16px 16px;
     box-sizing: border-box;
-    flex: 1; /* CRITICAL: Takes up the remaining vertical space */
+    flex: 1;
+    /* CRITICAL: Takes up the remaining vertical space */
     display: flex;
-    flex-direction: column; /* CRITICAL: Makes its children stack vertically */
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38) inset;
--webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38) inset;
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.38) inset;
+    flex-direction: column;
+    /* CRITICAL: Makes its children stack vertically */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.38) inset;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.38) inset;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.38) inset;
 }
 
 .m-phone-notif {
@@ -153,14 +160,17 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     border-right: 1px solid gray;
     box-sizing: border-box;
     display: flex;
-    flex: 1; /* CRITICAL: Takes up all available space in m-phone-screen */
-    flex-direction: column; /* CRITICAL: Makes its children stack vertically */
+    flex: 1;
+    /* CRITICAL: Takes up all available space in m-phone-screen */
+    flex-direction: column;
+    /* CRITICAL: Makes its children stack vertically */
 }
 
 .fb-messenger-clone {
     height: 100%;
     display: flex;
-    flex: 1; /* CRITICAL: Makes the chat area fill the space above controls */
+    flex: 1;
+    /* CRITICAL: Makes the chat area fill the space above controls */
     background-color: white;
     flex-direction: column;
 }
@@ -226,18 +236,22 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
 
 .fb-messenger-clone-chat {
     display: flex;
-    flex-direction: column; 
-    flex: 1; /* CRITICAL: Fills space below the tab bar and handles overflow */
-    overflow-y: auto; /* <--- The SCROLLING MAGIC */
+    flex-direction: column;
+    flex: 1;
+    /* CRITICAL: Fills space below the tab bar and handles overflow */
+    overflow-y: auto;
+    /* <--- The SCROLLING MAGIC */
     background-color: white;
     padding: 16px;
     max-height: calc(100% - 43px);
 }
+
 .msg-container {
     display: flex;
     flex-direction: row;
     max-width: 85%;
 }
+
 .msg {
     padding: 10px 14px;
     border-radius: 18px;
@@ -249,7 +263,7 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
 
 .msg-container.left {
     align-self: flex-start;
-    
+
 }
 
 .msg-container.right {
@@ -257,6 +271,7 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     background-color: #0084ff;
     color: white;
 }
+
 .chat-messenger-image {
     width: 100px;
     height: 100px;
@@ -274,6 +289,7 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     height: 100%;
     object-fit: cover;
 }
+
 .official-badge {
     width: 18px;
     height: 18px;
@@ -283,60 +299,67 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     margin-left: 3px;
     fill: rgb(0, 183, 255);
 }
+
 .ex-small {
     font-size: 12px;
 }
 
 .chat-bubble.typing {
-  background-color: #f1f0f0;
-  color: #000;
-  border-radius: 18px;
-  padding: 8px 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  max-width: fit-content;
+    background-color: #f1f0f0;
+    color: #000;
+    border-radius: 18px;
+    padding: 8px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
 }
 
 .typing-indicator {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24px;
 }
 
 .typing-indicator span {
-  width: 6px;
-  height: 6px;
-  background-color: #888;
-  border-radius: 50%;
-  opacity: 0.6;
-  animation: typingBounce 1.3s infinite;
+    width: 6px;
+    height: 6px;
+    background-color: #888;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: typingBounce 1.3s infinite;
 }
 
 .typing-indicator span:nth-child(2) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .typing-indicator span:nth-child(3) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 @keyframes typingBounce {
-  0%, 80%, 100% {
-    transform: scale(0.6);
-    opacity: 0.4;
-  }
-  40% {
-    transform: scale(1);
-    opacity: 1;
-  }
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
+
 .fb-messenger-clone-controls {
     display: flex;
     flex-direction: row;
     padding: 0.5rem .5rem;
 }
+
 .form-input-with-icon {
     position: relative;
     display: flex;
@@ -354,6 +377,7 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     outline: none;
     background-color: transparent;
 }
+
 .messenger-svg-input {
     position: absolute;
     display: flex;
@@ -363,11 +387,14 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     width: 21px;
     height: 21px;
 }
-.fb-messenger-clone-chat > .d-flex.flex-column.align-items-center {
-    flex-shrink: 0; /* Ensures the header maintains its natural height */
-    padding-bottom: 10px; 
+
+.fb-messenger-clone-chat>.d-flex.flex-column.align-items-center {
+    flex-shrink: 0;
+    /* Ensures the header maintains its natural height */
+    padding-bottom: 10px;
     /* This ensures only the *messages* trigger the scroll bar, not the header. */
 }
+
 .unordered-list {
     list-style-type: none;
 }
@@ -375,6 +402,7 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
 .unordered-list li {
     margin-left: -15px;
 }
+
 .msg-image-small {
 
     width: 21px;
@@ -397,3 +425,24 @@ background: linear-gradient(90deg,rgba(46, 46, 46, 1) 0%, rgba(138, 138, 138, 1)
     object-fit: cover;
 
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .m-phone {
+        height: 820px;
+        max-height: 820px;
+        min-height: 820px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
