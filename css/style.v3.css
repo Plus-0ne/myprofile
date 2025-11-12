@@ -256,7 +256,7 @@ body {
     padding: 10px 14px;
     border-radius: 18px;
     line-height: 1.4;
-    font-size: 14px;
+    font-size: 13px;
     background-color: #d62888;
     color: white;
 }
@@ -424,6 +424,21 @@ body {
     height: 100%;
     object-fit: cover;
 
+}
+
+.msg-achor {
+    color: white;
+}
+
+.btn-msg {
+    border: none;
+    border-color: transparent;
+    border-radius: 50px;
+    padding: 0.5rem 0.8rem;
+}
+
+.btn-msg.primary {
+    background-color: white;
 }
 
 /* Small devices (landscape phones, 576px and up) */

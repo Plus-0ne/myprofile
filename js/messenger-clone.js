@@ -151,19 +151,108 @@ $(function () {
                     `, 9000);
         }, 9000 + 500);
 
+        // Projects
+        setTimeout(() => {
+
+            let exp = data.projects;
+            let projects = "";
 
 
+            $.each(exp, function (ind, val) {
+
+                let highlights = "";
+
+                $.each(val.highlights, function (idx, value) {
+                    highlights += `<li>${value}</li>`;
+                });
+
+                let techStack = "";
+
+                $.each(val.tech_stack, function (techind, techVal) { 
+                     techStack += `${techVal}, `;
+                });
+
+                let projectLink = (val.link) ?? "";
+                let linkanchor = "";
+                if (projectLink) {
+                    linkanchor = `➡️ <a class="msg-achor" href="${projectLink}">${projectLink}</a>`;
+                }
+                projects += `
+                        <div>
+                            <label>🌐 ${val.name} </label>
+                        </div>
+                        <div>
+                            ${linkanchor}
+                        </div>
+                        <div>
+                            🧑‍💼 ${val.role}
+                        </div>
+                        <div>
+                            ⚙️ ${techStack}
+                        </div>
+                        <div>
+                            💡Highlights
+                        </div>
+                        <ol>
+                            ${highlights}
+                        </ol>
+                        `;
+            });
+
+            showTyping(`
+                    <div>
+                        <strong>
+                            Projects    
+                        </strong>
+                        ${projects}    
+                    </div>
+                    `, 12500);
+        }, 12500 + 500);
+
+        // Choices
+        setTimeout(() => {
+
+            let d = data;
+
+            let buttonsChoices = `
+            <div class="d-flex flex-column justify-content-start gap-2">
+                <button class="btn-msg primary"> Introduction </button>
+                <button class="btn-msg primary"> Core skills </button>
+                <button class="btn-msg primary"> Experience </button>
+                <button class="btn-msg primary"> Selected Projets </button>
+                <button class="btn-msg primary"> Education </button>
+            </div>`;
+
+            showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 13000);
+        }, 13000 + 500);
+
+        
     }
 
     function showTyping(message, delay = 500) {
         const chatScroller = $("#chatContainer");
         // Change this line to use #chatContainer:
-        chatScroller.append('<div class="chat-bubble typing"><div class="typing-indicator"><span></span><span></span><span></span></div></div>');
+        chatScroller.append(`
+            <div class="d-flex flex-row mb-3 typeingbubble">
+                <div class="d-flex flex-column justify-content-end">
+                    <div class="msg-image-small">
+                        <img src="img/pic1.png"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="chat-bubble typing"><div class="typing-indicator"><span></span><span></span><span></span></div></div>
+                </div>
+            </div>
+            `);
 
         chatScroller.scrollTop(chatScroller[0].scrollHeight);
         // After delay, remove typing and show message
         setTimeout(() => {
-            $(".chat-bubble.typing").remove();
+            $(".typeingbubble").remove();
             // Change this line to use #chatContainer:
             chatScroller.append(`
             <div class="msg-container left mb-3">

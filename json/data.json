@@ -70,10 +70,7 @@
     "projects": [
         {
             "name": "Social Media Platform",
-            "links": [
-                "https://lounge.metaanimals.org/",
-                "https://metaanimals.tech"
-            ],
+            "link": "https://metaanimals.tech/",
             "role": "Full-Stack Developer",
             "tech_stack": [
                 "Laravel",
