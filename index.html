@@ -11,7 +11,7 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="bootstrap//css/bootstrap.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.v3.css">
+    <link id="addTimeStamp" rel="stylesheet" href="css/style.v3.css">
     <!-- Material design icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
@@ -232,7 +232,11 @@
     <!-- Bootstrap js -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    <script src="js/messenger-clone.js"></script>
+    <script type="text/javascript">
+        let time = new Date().getTime();
+        document.write('<script type="text/javascript" src="js/messenger-clone.js?c='+time+'"><\/script>');
+    </script>
+    <!-- <script src="js/messenger-clone.js"></script> -->
 </body>
 
 </html>

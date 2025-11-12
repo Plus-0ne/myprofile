@@ -80,7 +80,7 @@ $(function () {
             showTyping(`
                     <div class="col-12 mb-1"><strong>Frameworks / Library</strong></div><ul class="unordered-list"> ${frameworks_libraries} </ul>
                     `, 4500);
-            }, 4500 + 500);
+        }, 4500 + 500);
 
         // Tools and platforms
         setTimeout(() => {
@@ -168,8 +168,8 @@ $(function () {
 
                 let techStack = "";
 
-                $.each(val.tech_stack, function (techind, techVal) { 
-                     techStack += `${techVal}, `;
+                $.each(val.tech_stack, function (techind, techVal) {
+                    techStack += `${techVal}, `;
                 });
 
                 let projectLink = (val.link) ?? "";
@@ -230,7 +230,7 @@ $(function () {
                     `, 13000);
         }, 13000 + 500);
 
-        
+
     }
 
     function showTyping(message, delay = 500) {
@@ -337,5 +337,15 @@ $(function () {
 
     });
 
+    const addTimestampToExLinks = () => {
+        const lnks = document.getElementById("addTimeStamp");
+        if (lnks) {
+            const timestamp = new Date().getTime();
+            lnks.href = lnks.href.split('?')[0] + '?t=' + timestamp;
+        }
+        
+    }
+
+    addTimestampToExLinks();
 
 });
