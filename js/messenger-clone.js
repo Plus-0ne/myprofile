@@ -212,16 +212,14 @@ $(function () {
         // Choices
         setTimeout(() => {
 
-            let d = data;
-
             let buttonsChoices = `
-            <div class="d-flex flex-column justify-content-start gap-2">
-                <button class="btn-msg primary"> Introduction </button>
-                <button class="btn-msg primary"> Core skills </button>
-                <button class="btn-msg primary"> Experience </button>
-                <button class="btn-msg primary"> Selected Projets </button>
-                <button class="btn-msg primary"> Education </button>
-            </div>`;
+                <div class="d-flex flex-column justify-content-start gap-2">
+                    <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                    <button class="btn-msg primary viewExperience"> Experience </button>
+                    <button class="btn-msg primary viewProjects"> Projects </button>
+                    <button class="btn-msg primary viewEduc"> Education </button>
+                </div>`;
 
             showTyping(`
                     <div>
@@ -271,6 +269,374 @@ $(function () {
         }, delay);
     }
 
+    const fetchData = async () => {
+
+        try {
+
+            const response = await fetch('json/data.json');
+
+            const result = await response.json();
+
+            return result;
+
+        } catch (error) {
+
+            console.log(error);
+
+            return false;
+        }
+
+    };
+    $(document).on("click", ".viewIntro", function () {
+        fetchData().then((result) => {
+
+            if (!result) {
+
+                return;
+            }
+
+            // Intro
+            showTyping(`Hi! I’m ${result.name}, a full-stack developer 👋`);
+
+            setTimeout(() => {
+                showTyping(result.summary, 1500);
+            }, 1500 + 500);
+
+            // Choices
+            setTimeout(() => {
+
+                let d = result;
+
+                let buttonsChoices = `
+                <div class="d-flex flex-column justify-content-start gap-2">
+                    <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                    <button class="btn-msg primary viewExperience"> Experience </button>
+                    <button class="btn-msg primary viewProjects"> Projects </button>
+                    <button class="btn-msg primary viewEduc"> Education </button>
+                </div>`;
+
+                showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 4000);
+            }, 4000 + 500);
+
+        });
+    });
+
+    $(document).on("click", ".viewCoreSkills", function () {
+        fetchData().then((result) => {
+
+            if (!result) {
+
+                return;
+            }
+
+            const core_skills = result.core_skills;
+            // Languages
+            setTimeout(() => {
+
+                let languages = "";
+
+                $.each(core_skills.languages, function (ind, val) {
+                    languages += `<li>✅ ${val}</li>`
+                });
+
+                showTyping(`
+                    <div class="col-12 mb-1"><strong>Languages</strong></div><ul class="unordered-list"> ${languages} </ul>
+                    `, 0);
+            }, 0 + 500);
+
+            // Framework and libraries
+            setTimeout(() => {
+
+                let frameworks_libraries = "";
+
+                $.each(core_skills.frameworks_libraries, function (ind, val) {
+                    frameworks_libraries += `<li>✅ ${val}</li>`
+                });
+
+                showTyping(`
+                    <div class="col-12 mb-1"><strong>Frameworks / Library</strong></div><ul class="unordered-list"> ${frameworks_libraries} </ul>
+                    `, 3000);
+            }, 3000 + 500);
+
+            // Tools and platforms
+            setTimeout(() => {
+
+                let tools_platforms = "";
+
+                $.each(core_skills.tools_platforms, function (ind, val) {
+                    tools_platforms += `<li>✅ ${val}</li>`
+                });
+
+                showTyping(`
+                    <div class="col-12 mb-1"><strong>Platform / Tools</strong></div><ul class="unordered-list"> ${tools_platforms} </ul>
+                    `, 6000);
+            }, 6000 + 500);
+
+            // Others
+            setTimeout(() => {
+
+                let other = "";
+
+                $.each(core_skills.other, function (ind, val) {
+                    other += `<li>✅ ${val}</li>`
+                });
+
+                showTyping(`
+                    <div class="col-12 mb-1"><strong>Others</strong></div><ul class="unordered-list"> ${other} </ul>
+                    `, 9000);
+            }, 9000 + 500);
+
+            // Choices
+            setTimeout(() => {
+
+                let d = result;
+
+                let buttonsChoices = `
+                <div class="d-flex flex-column justify-content-start gap-2">
+                    <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                    <button class="btn-msg primary viewExperience"> Experience </button>
+                    <button class="btn-msg primary viewProjects"> Projects </button>
+                    <button class="btn-msg primary viewEduc"> Education </button>
+                </div>`;
+
+                showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 12000);
+            }, 12000 + 500);
+        });
+    });
+
+    $(document).on("click", ".viewExperience", function () {
+        fetchData().then((result) => {
+
+            if (!result) {
+
+                return;
+            }
+
+            // Experiences
+            setTimeout(() => {
+
+                let exp = result.experience;
+                let experience = "";
+
+
+                $.each(exp, function (ind, val) {
+
+                    let responsibilities = "";
+
+                    $.each(val.responsibilities, function (idx, value) {
+                        responsibilities += `<li>${value}</li>`;
+                    });
+
+                    experience += `
+                        <div>
+                        <label>💻 ${val.position} | ${val.company}</label>
+                        </div>
+                        <div>
+                        <i><small>${val.years}</small></i>
+                        </div>
+                        <div>
+                        Responsibilities
+                        </div>
+                        <ol>
+                        ${responsibilities}
+                        </ol>
+                        `;
+                });
+
+                showTyping(`
+                    <div>
+                        <strong>
+                            Experience    
+                        </strong>
+                        ${experience}    
+                    </div>
+                    `, 1000);
+            }, 1000 + 500);
+
+            // Choices
+            setTimeout(() => {
+
+                let d = result;
+
+                let buttonsChoices = `
+                <div class="d-flex flex-column justify-content-start gap-2">
+                    <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                    <button class="btn-msg primary viewExperience"> Experience </button>
+                    <button class="btn-msg primary viewProjects"> Projects </button>
+                    <button class="btn-msg primary viewEduc"> Education </button>
+                </div>`;
+
+                showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 3000);
+            }, 3000 + 500);
+        });
+
+
+    });
+
+    // viewProjects
+    $(document).on("click", ".viewProjects", function () {
+        alert("Clicked");
+        fetchData().then((result) => {
+
+            console.log(result);
+
+            if (!result) {
+
+                return;
+            }
+
+            // Projects
+            setTimeout(() => {
+
+                let exp = result.projects;
+                let projects = "";
+
+
+                $.each(exp, function (ind, val) {
+
+                    let highlights = "";
+
+                    $.each(val.highlights, function (idx, value) {
+                        highlights += `<li>${value}</li>`;
+                    });
+
+                    let techStack = "";
+
+                    $.each(val.tech_stack, function (techind, techVal) {
+                        techStack += `${techVal}, `;
+                    });
+
+                    let projectLink = (val.link) ?? "";
+                    let linkanchor = "";
+                    if (projectLink) {
+                        linkanchor = `➡️ <a class="msg-achor" href="${projectLink}">${projectLink}</a>`;
+                    }
+                    projects += `
+                        <div>
+                            <label>🌐 ${val.name} </label>
+                        </div>
+                        <div>
+                            ${linkanchor}
+                        </div>
+                        <div>
+                            🧑‍💼 ${val.role}
+                        </div>
+                        <div>
+                            ⚙️ ${techStack}
+                        </div>
+                        <div>
+                            💡Highlights
+                        </div>
+                        <ol>
+                            ${highlights}
+                        </ol>
+                        `;
+                });
+
+                showTyping(`
+                    <div>
+                        <strong>
+                            Projects    
+                        </strong>
+                        ${projects}    
+                    </div>
+                    `, 1000);
+            }, 1000 + 500);
+
+            // Choices
+            setTimeout(() => {
+
+                let d = result;
+
+                let buttonsChoices = `
+                    <div class="d-flex flex-column justify-content-start gap-2">
+                        <button class="btn-msg primary viewIntro"> Introduction </button>
+                        <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                        <button class="btn-msg primary viewExperience"> Experience </button>
+                        <button class="btn-msg primary viewProjects"> Projects </button>
+                        <button class="btn-msg primary viewEduc"> Education </button>
+                    </div>`;
+
+                showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 4000);
+            }, 4000 + 500);
+        });
+    });
+    // viewEduc
+    $(document).on("click", ".viewEduc", function () {
+
+        alert("Clicked");
+
+        fetchData().then((result) => {
+
+            console.log(result);
+
+            if (!result) {
+
+                return;
+            }
+
+            let educ = result.education;
+            // Education
+            setTimeout(() => {
+
+                showTyping(`
+                    <div>
+                        <strong>
+                            Education    
+                        </strong>
+                    </div>
+                    <div>
+                        ${educ.school} | ${educ.degree}
+                    </div>
+                    <div>
+                        ${educ.address}
+                    </div>
+
+                    `, 1000);
+            }, 1000 + 500);
+
+            // Choices
+            setTimeout(() => {
+
+                let d = result;
+
+                let buttonsChoices = `
+                    <div class="d-flex flex-column justify-content-start gap-2">
+                        <button class="btn-msg primary viewIntro"> Introduction </button>
+                        <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                        <button class="btn-msg primary viewExperience"> Experience </button>
+                        <button class="btn-msg primary viewProjects"> Projects </button>
+                        <button class="btn-msg primary viewEduc"> Education </button>
+                    </div>`;
+
+                showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 3000);
+            }, 3000 + 500);
+        });
+    });
+    
     navigator.getBattery().then((battery) => {
 
         const updateBatteryIcon = () => {
@@ -343,7 +709,7 @@ $(function () {
             const timestamp = new Date().getTime();
             lnks.href = lnks.href.split('?')[0] + '?t=' + timestamp;
         }
-        
+
     }
 
     addTimestampToExLinks();

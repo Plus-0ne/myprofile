@@ -435,6 +435,7 @@ body {
     border-color: transparent;
     border-radius: 50px;
     padding: 0.5rem 0.8rem;
+    font-size: 12px;
 }
 
 .btn-msg.primary {
