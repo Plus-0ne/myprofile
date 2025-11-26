@@ -215,6 +215,7 @@ $(function () {
             let buttonsChoices = `
                 <div class="d-flex flex-column justify-content-start gap-2">
                     <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewContact"> Contact </button>
                     <button class="btn-msg primary viewCoreSkills"> Core skills </button>
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
@@ -310,6 +311,7 @@ $(function () {
                 let buttonsChoices = `
                 <div class="d-flex flex-column justify-content-start gap-2">
                     <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewContact"> Contact </button>
                     <button class="btn-msg primary viewCoreSkills"> Core skills </button>
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
@@ -323,6 +325,62 @@ $(function () {
                     `, 4000);
             }, 4000 + 500);
 
+        });
+    });
+
+    $(document).on("click",".viewContact", function () {
+        fetchData().then((result) => {
+
+            if (!result) {
+
+                return;
+            }
+
+            // Contact
+            setTimeout(() => {
+
+                let contact = result.contact;
+                
+                let contact_details = `<div class="d-flex flex-column">
+                    <div>
+                        📧 ${contact.email}
+                    </div>
+                    <div>
+                        📱 ${contact.phone}
+                    </div>
+                    <div>
+                        or visit my github account : <a href="${contact.github}" target="_blank">${contact.github}</a>
+                    </div>
+                </div>`;
+                showTyping(`
+                    <div>
+                        <strong>
+                            Contact    
+                        </strong>
+                        ${contact_details}    
+                    </div>
+                    `, 1000);
+            }, 1000 + 500);
+
+            // Choices
+            setTimeout(() => {
+
+                let buttonsChoices = `
+                <div class="d-flex flex-column justify-content-start gap-2">
+                    <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewContact"> Contact </button>
+                    <button class="btn-msg primary viewCoreSkills"> Core skills </button>
+                    <button class="btn-msg primary viewExperience"> Experience </button>
+                    <button class="btn-msg primary viewProjects"> Projects </button>
+                    <button class="btn-msg primary viewEduc"> Education </button>
+                </div>`;
+
+                showTyping(`
+                    <div>
+                        ${buttonsChoices}    
+                    </div>
+                    `, 3000);
+            }, 3000 + 500);
         });
     });
 
@@ -399,6 +457,7 @@ $(function () {
                 let buttonsChoices = `
                 <div class="d-flex flex-column justify-content-start gap-2">
                     <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewContact"> Contact </button>
                     <button class="btn-msg primary viewCoreSkills"> Core skills </button>
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
@@ -471,6 +530,7 @@ $(function () {
                 let buttonsChoices = `
                 <div class="d-flex flex-column justify-content-start gap-2">
                     <button class="btn-msg primary viewIntro"> Introduction </button>
+                    <button class="btn-msg primary viewContact"> Contact </button>
                     <button class="btn-msg primary viewCoreSkills"> Core skills </button>
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
@@ -490,10 +550,8 @@ $(function () {
 
     // viewProjects
     $(document).on("click", ".viewProjects", function () {
-        alert("Clicked");
-        fetchData().then((result) => {
 
-            console.log(result);
+        fetchData().then((result) => {
 
             if (!result) {
 
@@ -566,6 +624,7 @@ $(function () {
                 let buttonsChoices = `
                     <div class="d-flex flex-column justify-content-start gap-2">
                         <button class="btn-msg primary viewIntro"> Introduction </button>
+                        <button class="btn-msg primary viewContact"> Contact </button>
                         <button class="btn-msg primary viewCoreSkills"> Core skills </button>
                         <button class="btn-msg primary viewExperience"> Experience </button>
                         <button class="btn-msg primary viewProjects"> Projects </button>
@@ -583,11 +642,7 @@ $(function () {
     // viewEduc
     $(document).on("click", ".viewEduc", function () {
 
-        alert("Clicked");
-
         fetchData().then((result) => {
-
-            console.log(result);
 
             if (!result) {
 
@@ -622,6 +677,7 @@ $(function () {
                 let buttonsChoices = `
                     <div class="d-flex flex-column justify-content-start gap-2">
                         <button class="btn-msg primary viewIntro"> Introduction </button>
+                        <button class="btn-msg primary viewContact"> Contact </button>
                         <button class="btn-msg primary viewCoreSkills"> Core skills </button>
                         <button class="btn-msg primary viewExperience"> Experience </button>
                         <button class="btn-msg primary viewProjects"> Projects </button>
