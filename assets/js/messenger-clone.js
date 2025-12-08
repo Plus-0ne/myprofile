@@ -19,7 +19,7 @@ $(function () {
     }, 1);
 
     const getJsonData = () => {
-        fetch("json/data.json")
+        fetch("assets/json/data.json")
             .then(response => response.json())
             .then((data) => {
                 fillChatContainerWithData(data);
@@ -220,6 +220,7 @@ $(function () {
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
                     <button class="btn-msg primary viewEduc"> Education </button>
+                    <button class="btn-msg primary downloadResume"> Download Resume </button>
                 </div>`;
 
             showTyping(`
@@ -239,7 +240,7 @@ $(function () {
             <div class="d-flex flex-row mb-3 typeingbubble">
                 <div class="d-flex flex-column justify-content-end">
                     <div class="msg-image-small">
-                        <img src="img/pic1.png"/>
+                        <img src="assets/img/pic1.png"/>
                     </div>
                 </div>
                 <div>
@@ -257,7 +258,7 @@ $(function () {
             <div class="msg-container left mb-3">
                 <div class="d-flex flex-column justify-content-end">
                     <div class="msg-image-small">
-                        <img src="img/pic1.png"/>
+                        <img src="assets/img/pic1.png"/>
                     </div>
                 </div>
                 <div class="msg">
@@ -316,6 +317,7 @@ $(function () {
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
                     <button class="btn-msg primary viewEduc"> Education </button>
+                    <button class="btn-msg primary downloadResume"> Download Resume </button>
                 </div>`;
 
                 showTyping(`
@@ -328,7 +330,7 @@ $(function () {
         });
     });
 
-    $(document).on("click",".viewContact", function () {
+    $(document).on("click", ".viewContact", function () {
         fetchData().then((result) => {
 
             if (!result) {
@@ -340,7 +342,7 @@ $(function () {
             setTimeout(() => {
 
                 let contact = result.contact;
-                
+
                 let contact_details = `<div class="d-flex flex-column">
                     <div>
                         📧 ${contact.email}
@@ -373,6 +375,7 @@ $(function () {
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
                     <button class="btn-msg primary viewEduc"> Education </button>
+                    <button class="btn-msg primary downloadResume"> Download Resume </button>
                 </div>`;
 
                 showTyping(`
@@ -462,6 +465,7 @@ $(function () {
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
                     <button class="btn-msg primary viewEduc"> Education </button>
+                    <button class="btn-msg primary downloadResume"> Download Resume </button>
                 </div>`;
 
                 showTyping(`
@@ -535,6 +539,7 @@ $(function () {
                     <button class="btn-msg primary viewExperience"> Experience </button>
                     <button class="btn-msg primary viewProjects"> Projects </button>
                     <button class="btn-msg primary viewEduc"> Education </button>
+                    <button class="btn-msg primary downloadResume"> Download Resume </button>
                 </div>`;
 
                 showTyping(`
@@ -629,6 +634,7 @@ $(function () {
                         <button class="btn-msg primary viewExperience"> Experience </button>
                         <button class="btn-msg primary viewProjects"> Projects </button>
                         <button class="btn-msg primary viewEduc"> Education </button>
+                        <button class="btn-msg primary downloadResume"> Download Resume </button>
                     </div>`;
 
                 showTyping(`
@@ -682,6 +688,7 @@ $(function () {
                         <button class="btn-msg primary viewExperience"> Experience </button>
                         <button class="btn-msg primary viewProjects"> Projects </button>
                         <button class="btn-msg primary viewEduc"> Education </button>
+                        <button class="btn-msg primary downloadResume"> Download Resume </button>
                     </div>`;
 
                 showTyping(`
@@ -692,7 +699,20 @@ $(function () {
             }, 3000 + 500);
         });
     });
-    
+
+    // Download resume
+    $(document).on("click", ".downloadResume", function () {
+
+        const filePath = 'assets/documents/romel-cubelo-resume.pdf';
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.download = 'romel-cubelo-resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+    });
+
     navigator.getBattery().then((battery) => {
 
         const updateBatteryIcon = () => {
