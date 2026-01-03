@@ -19,7 +19,7 @@ $(function () {
     }, 1);
 
     const getJsonData = () => {
-        fetch("assets/json/data.json")
+        fetch("../assets/json/data.json")
             .then(response => response.json())
             .then((data) => {
                 fillChatContainerWithData(data);
@@ -240,7 +240,7 @@ $(function () {
             <div class="d-flex flex-row mb-3 typeingbubble">
                 <div class="d-flex flex-column justify-content-end">
                     <div class="msg-image-small">
-                        <img src="assets/img/pic1.png"/>
+                        <img src="../assets/img/pic1.png"/>
                     </div>
                 </div>
                 <div>
@@ -258,7 +258,7 @@ $(function () {
             <div class="msg-container left mb-3">
                 <div class="d-flex flex-column justify-content-end">
                     <div class="msg-image-small">
-                        <img src="assets/img/pic1.png"/>
+                        <img src="../assets/img/pic1.png"/>
                     </div>
                 </div>
                 <div class="msg">
